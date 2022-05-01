@@ -13,7 +13,7 @@ export class CarListComponent implements OnInit {
 
   constructor(private carService: CarService) { }
 
-  getMuseums(): void {
+  getMarcas(): void {
     this.carService.getCars().subscribe((cars) => {
         this.cars = cars;
         this.getTotalMarcas();
@@ -30,7 +30,7 @@ export class CarListComponent implements OnInit {
   }
 
   ngOnInit() {
-    this.getMuseums()
+    this.getMarcas()
   }
 
 }
