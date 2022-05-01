@@ -1,3 +1,22 @@
-<p>
-  car-list works!
-</p>
+<table class="table">
+  <thead class="table-dark">
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">Marca</th>
+      <th scope="col">Linea</th>
+      <th scope="col">Modelo</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let car of cars; let i = index">
+      <th scope="row">{{i+1}}</th>
+      <td>{{car.marca}}</td>
+      <td>{{car.linea}}</td>
+      <td>{{car.modelo}}</td>
+    </tr>
+  </tbody>
+  </table>
+  <div  *ngFor="let marca of total_marcas | keyvalue">
+    Total {{marca.key}}: {{marca.value}}
+  </div>
+
