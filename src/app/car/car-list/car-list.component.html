@@ -9,14 +9,13 @@
   </thead>
   <tbody>
     <tr *ngFor="let car of cars; let i = index">
-      <th scope="row">{{i+1}}</th>
-      <td>{{car.marca}}</td>
-      <td>{{car.linea}}</td>
-      <td>{{car.modelo}}</td>
+      <th class="th{{i+1}}" scope="row">{{i+1}}</th>
+      <td class="td{{i+1}}">{{car.marca}}</td>
+      <td class="td{{i+1}}">{{car.linea}}</td>
+      <td class="td{{i+1}}">{{car.modelo}}</td>
     </tr>
   </tbody>
   </table>
-  <div  *ngFor="let marca of total_marcas | keyvalue">
-    Total {{marca.key}}: {{marca.value}}
+  <div>
+    <div class="total" *ngFor="let marca of total_marcas | keyvalue">Total {{marca.key}}: {{marca.value}}</div>
   </div>
-
